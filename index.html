@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Zing Music family</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Music template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
+<style>
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+body {
+  background: #fafafa;
+}
+
+.music-card {
+  margin: 100px auto;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 500px;
+}
+.music-card > .image img {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.3;
+  height: 300px;
+  width: 300px;
+}
+.music-card > .image:after {
+  height: 100px;
+  content: '';
+  top: 200px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background: linear-gradient(rgba(221, 65, 127, 0), #DD417F);
+}
+.music-card > .wave {
+  position: absolute;
+  height: 750px;
+  width: 750px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -70%;
+  margin-top: -130%;
+  border-radius: 40%;
+  background: radial-gradient(#B01DE8, #F34235);
+  -webkit-animation: spin 3000ms infinite linear;
+          animation: spin 3000ms infinite linear;
+}
+.music-card > .wave:nth-child(2) {
+  top: 10px;
+  -webkit-animation: spin 4000ms infinite linear;
+          animation: spin 4000ms infinite linear;
+}
+.music-card > .wave:nth-child(3) {
+  top: 10px;
+  -webkit-animation: spin 5000ms infinite linear;
+          animation: spin 5000ms infinite linear;
+}
+.music-card > .info {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.music-card > .info > .title {
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: 'Playfair display';
+  color: #333;
+  margin-bottom: 8px;
+}
+.music-card > .info > .artist {
+  font-family: 'Source sans pro';
+  color: #cfcfcf;
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-center">
+
+						<!-- Logo -->
+						<div class="logo">
+							<a href="#" class="d-flex flex-row align-items-end justify-content-start">
+								<span class="logo_bars d-flex flex-row align-items-end justify-content-between"><span></span><span></span><span></span><span></span><span></span></span>
+								<span class="logo_text">music</span>
+							</a>
+						</div>
+
+						<!-- Main Navigation -->
+						<nav class="main_nav">
+							<ul class="d-flex flex-row align-items-center justify-content-start">
+								<li class="active"><a href="index.html">Home</a></li>
+								<li><a href="artists.html">Artists</a></li>
+								<li><a href="#">Download Music</a></li>
+								<li><a href="blog.html">News</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+
+						<!-- User area -->
+						<div class="log_reg d-flex flex-row align-items-center justify-content-start">
+							<ul class="d-flex flex-row align-items-start justify-content-start">
+								<li><a href="#">Login</a></li>
+								<li><a href="#">Register</a></li>
+							</ul>
+
+							<!-- Hamburger -->
+							<div class="hamburger d-flex flex-column align-items-end justify-content-between"><div></div><div></div><div></div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_container">
+			<div class="menu_background"></div>
+			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div class="menu_content d-flex flex-column align-items-center justify-content-start">
+				<nav class="menu_nav">
+					<ul class="d-flex flex-column align-items-center justify-content-start">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="artists.html">Artists</a></li>
+						<li><a href="#">Download Music</a></li>
+						<li><a href="blog.html">News</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+
+				<!-- Slide -->
+				<div class="slide">
+					<div class="background_image" style="background-image:url(images/index.jpg)"></div>
+					<div class="home_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_content">
+										<div class="tickets_form_container">
+											<form action="#" class="tickets_form">
+
+													<table> <tr>
+
+														<td>
+														<div class="music-card" style="background-color:#1a54ca; margin-right:50px; width:300px;">
+														  <div class="image">
+														    <img src="https://images-na.ssl-images-amazon.com/images/I/513VUhBNJzL.jpg"/>
+														  </div>
+														  <div class="wave"></div>
+														  <div class="wave"></div>
+														  <div class="wave"></div>
+														  <div class="info">
+														    <h2 class="title"><b>Blue Neighborhood</b></h2>
+														    <author class="artist">Troye Sivan</author>
+														  </div>
+														</div>
+													</td>
+
+														<td>
+														<div class="music-card" style="background-color:#1a54ca; margin-right:50px; width:300px;">
+															<div class="image">
+																<img src="https://gp1.wac.edgecastcdn.net/802892/http_public_production/artists/images/782109/original/crop:x0y0w1500h1500/hash:1525335073/LRM_EXPORT_20180430_103310.jpg?1525335073"/>
+															</div>
+															<div class="wave"></div>
+															<div class="wave"></div>
+															<div class="wave"></div>
+															<div class="info">
+																<h2 class="title"><b>Rockin' with Best</b></h2>
+																<author class="artist"><font size="3px">KRU 172</font></author>
+															</div>
+														</div>
+													</td>
+
+													<td>
+														<div class="music-card" style="background-color:#1a54ca; margin-right:50px; width:300px;">
+															<div class="image">
+																<img src="https://images-na.ssl-images-amazon.com/images/I/513VUhBNJzL.jpg"/>
+															</div>
+															<div class="wave"></div>
+															<div class="wave"></div>
+															<div class="wave"></div>
+															<div class="info">
+																<h2 class="title">Blue Neighborhood</h2>
+																<author class="artist">Troye Sivan</author>
+															</div>
+														</div>
+													</td>
+
+
+												</tr></table>
+
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide -->
+				<div class="slide">
+					<div class="background_image" style="background-image:url(images/index.jpg)"></div>
+					<div class="home_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_content">
+										<div class="home_title_container text-center">
+											<div class="home_title islive text-center"><h1>your <span>Rythm.</span></h1></div>
+										</div>
+										<div class="tickets_form_container">
+											<form action="#" class="tickets_form">
+												<div class="d-flex flex-md-row flex-column align-items-start justify-content-md-between justify-content-start">
+													<div class="tickets_form_inputs d-flex flex-row align-items-start justify-content-between">
+														<div class="custom_dropdown tickets_form_input cdd">
+															<div class="custom_dropdown_selected cdd">Event</div>
+															<ul class="cdd">
+																<li>Event 1</li>
+																<li>Event 2</li>
+																<li>Event 3</li>
+															</ul>
+														</div>
+														<input type="text" class="tickets_form_input" placeholder="Tickets" required="required">
+													</div>
+													<button class="tickets_form_button button"><span>get your tickets</span></button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide -->
+				<div class="slide">
+					<div class="background_image" style="background-image:url(images/index.jpg)"></div>
+					<div class="home_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_content">
+										<div class="home_title_container text-center">
+											<div class="home_title islive text-center"><h1>your <span>music.</span></h1></div>
+										</div>
+										<div class="tickets_form_container">
+											<form action="#" class="tickets_form">
+												<div class="d-flex flex-md-row flex-column align-items-start justify-content-md-between justify-content-start">
+													<div class="tickets_form_inputs d-flex flex-row align-items-start justify-content-between">
+														<div class="custom_dropdown tickets_form_input cdd">
+															<div class="custom_dropdown_selected cdd">Event</div>
+															<ul class="cdd">
+																<li>Event 1</li>
+																<li>Event 2</li>
+																<li>Event 3</li>
+															</ul>
+														</div>
+														<input type="text" class="tickets_form_input" placeholder="Tickets" required="required">
+													</div>
+													<button class="tickets_form_button button"><span>get your tickets</span></button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Home Slider Navigation -->
+			<div class="home_slider_nav"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+
+			<!-- Scroll Down -->
+			<div class="scroll_down scroll_down_link" data-scroll-to=".tours">
+				<a href="#"></a>
+				<div class="d-flex flex-row align-items-center justify-content-start">
+					<div>scroll down</div>
+					<div class="scroll_arrows d-flex flex-column align-items-start justify-content-start">
+						<img src="images/arrow_down.png" alt="">
+						<img src="images/arrow_down.png" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Song -->
+
+	<div class="song">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/song.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="song_content">
+
+						<!-- Player -->
+						<div class="single_player_container">
+							<div class="single_player d-flex flex-row align-items-center justify-content-start">
+								<div id="jplayer_1" class="jp-jplayer"></div>
+								<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+									<div class="jp-gui jp-interface d-flex flex-lg-row flex-column align-items-start justify-content-start">
+
+										<!-- Player Controls -->
+										<div class="player_controls_box d-flex flex-row align-items-start justify-content-start">
+											<div class="order-lg-1 order-2">
+												<div class="player_title">song of the week</div>
+												<div class="jp-controls-holder player_controls ml-auto d-flex flex-row align-items-start justify-content-start">
+													<button class="jp-play player_button" tabindex="0"></button>
+													<button class="jp-stop player_button" tabindex="0"></button>
+												</div>
+											</div>
+											<div class="song_image ml-lg-auto order-lg-2 order-1"><img src="images/song_1.jpg" alt=""></div>
+										</div>
+
+										<!-- Progress Bar -->
+										<div class="player_bars d-flex flex-row align-items-start justify-content-start">
+											<div class="player_progress_box">
+												<div class="jp-current-time" role="timer" aria-label="time">00:00</div>
+												<div class="song_info">
+													<div class="jp-artist" aria-label="title">Michael Smith</div>
+													<div class="jp-title" aria-label="title"></div>
+												</div>
+												<div class="jp-progress">
+													<div class="jp-seek-bar">
+														<div>
+															<div class="jp-play-bar"><span></span></div>
+														</div>
+													</div>
+												</div>
+												<div class="jp-duration ml-auto" role="timer" aria-label="duration">02:33</div>
+											</div>
+
+											<!-- Volume Controls -->
+											<div class="jp-volume-controls ml-lg-auto">
+												<div class="mute_button">
+													<button class="jp-mute" tabindex="0"></button>
+												</div>
+												<div class="d-flex flex-row align-items-center justify-content-start">
+													<div class="jp-volume-bar">
+														<div>
+															<div class="jp-volume-bar-value"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="jp-no-solution">
+										<span>Update Required</span>
+										To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Tours -->
+
+	<!-- Newsletter -->
+	<div class="newsletter">
+
+      <div class = "row" style = "zbackground-color: #27ae60;">
+        <div class = "col-xl-12"><center><p align = "center"><h3>Site is Built by</h3></p></center></div>
+      </div>
+
+
+			<div class="row" align = "center" style = " zbackground: #f46b45; /* fallback for old browsers */
+  zbackground: -webkit-linear-gradient(to right, #f46b45, #eea849); /* Chrome 10-25, Safari 5.1-6 */
+  zbackground: linear-gradient(to right, #f46b45, #eea849); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+<br><br><br>
+				<!-- Newsletter Content -->
+				<div class="col-xl-6">
+					<div class="newsletter_content">
+						<div class="section_title"><h2>Sourav Goyal</h2></div>
+						<div class="newsletter_text">
+							<p>5<sup>th</sup> year Computer Science, IIIT Hyderabad</p>
+						</div>
+					</div>
+				</div>
+
+        <div class="col-xl-6">
+					<div class="newsletter_content">
+						<div class="section_title"><h2>Manas K Verma</h2></div>
+						<div class="newsletter_text">
+							<p>5<sup>th</sup> year Computer Science, IIIT Hyderabad</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+      <div class = "row" style = "zbackground-color: #2980b9;">
+        <div class = "col-xl-12"><center><p align = "center"><h3>Built under guidance of</h3></p></center></div>
+      </div>
+
+
+      <div class = "row" style = "zbackground: #F1F2B5;  /* fallback for old browsers */
+zbackground: -webkit-linear-gradient(to right, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
+zbackground: linear-gradient(to right, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+" >
+<br>
+        <div class = "col-xl-12"><center><p align = "center"><h2>Prof. Sunil M. Lohar</h2></p></center></div>
+      </div>
+
+	</div>
+
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="styles/bootstrap-4.1.2/popper.js"></script>
+<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
+<script src="plugins/jPlayer/jquery.jplayer.min.js"></script>
+<script src="plugins/jPlayer/jplayer.playlist.min.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/progressbar/progressbar.min.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+
+</body>
+</html>
